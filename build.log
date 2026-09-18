@@ -1,0 +1,65 @@
+﻿
+> ycomps-web@1.0.0 build
+> next build
+
+  Ôû▓ Next.js 14.2.35
+  - Environments: .env
+
+   Creating an optimized production build ...
+node.exe : Failed to compile.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to compile.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+./src/components/layout/AdminShell.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mC:\Users\LENOVO\Downloads\ycomps-backend\frontend\src\components\layout\AdminSh
+ell.tsx[0m:93:1]
+ [2m93[0m |     href === "/dashboard" ? pathname === "/dashboard" : pathname === href || 
+pathname.startsWith(href + "/");
+ [2m94[0m | 
+ [2m95[0m |   return (
+ [2m96[0m |     <div className="min-h-screen bg-surface">
+    : [31;1m     ^^^[0m
+ [2m97[0m |       <GlobalSearch open={searchOpen} onClose={() => setSearchOpen(false)} />
+ [2m98[0m | 
+ [2m98[0m |       {/* Drawer backdrop */}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/layout/AdminShell.tsx
+./src/components/layout/index.ts
+./src/app/(app)/layout.tsx
+
+./src/app/(app)/chat/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4mC:\Users\LENOVO\Downloads\ycomps-backend\frontend\src\app\(app)\chat\page.tsx
+[0m:244:1]
+ [2m244[0m |   };
+ [2m245[0m | 
+ [2m246[0m |   return (
+ [2m247[0m |     <div>
+     : [31;1m     ^^^[0m
+ [2m248[0m |       <PageHeader title="Messages" description="Coordinate with field teams in 
+real time." />
+ [2m249[0m |       <input ref={fileRef} type="file" accept="image/*" className="hidden" />
+ [2m249[0m |       <NewChatModal open={newChatOpen} onClose={() => setNewChatOpen(false)} 
+onStarted={(c) => { setActiveId(c.id); loadConversations(); }} />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/(app)/chat/page.tsx
+
+
+> Build failed because of webpack errors
