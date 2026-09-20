@@ -110,7 +110,7 @@ function Navbar({ scrolled }: { scrolled: boolean }) {
   const [open, setOpen] = useState(false);
   const links = [
     { href: "#platform", label: "Platform" },
-    { href: "#roles", label: "Who it's for" },
+    { href: "#roles", label: "Who it&apos;s for" },
     { href: "#map", label: "Live Map" },
     { href: "#contact", label: "Contact" },
   ];
@@ -251,7 +251,7 @@ function Platform() {
     {
       icon: <Smartphone size={20} />,
       title: "Offline-first field app",
-      desc: "Field officials report from anywhere — low signal or none. Everything queues on-device and syncs automatically the moment you're back online.",
+      desc: "Field officials report from anywhere — low signal or none. Everything queues on-device and syncs automatically the moment you&apos;re back online.",
     },
     {
       icon: <Siren size={20} />,
@@ -298,7 +298,7 @@ function Platform() {
           Everything the field needs, <span className="bg-gradient-to-r from-brand-300 to-violet-300 bg-clip-text text-transparent">on one screen</span>
         </h2>
         <p className="mt-4 text-slate-400">
-          Purpose-built for campaign operations in Yobe State — from the state command room to a smartphone in a field official's hands.
+          Purpose-built for campaign operations in Yobe State — from the state command room to a smartphone in a field official&apos;s hands.
         </p>
       </Reveal>
 
