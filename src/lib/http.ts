@@ -9,7 +9,9 @@ const REFRESH_KEY = "ycomps.refresh";
 // same-origin with no CORS. In local dev it points straight at the Django
 // server (exposed via CORS) — mirroring how WebSockets already connect.
 export function apiUrl(path: string): string {
-  const base = (process.env.NEXT_PUBLIC_API_BASE || "").replace(/\/$/, "");
+  // Default: the hosted Render backend, so a missing env var never falls back
+  // to the browser's own localhost (which surfaces as "Failed to fetch").
+  const base = (process.env.NEXT_PUBLIC_API_BASE || "https://dmd-ops-backend.onrender.com").replace(/\/$/, "");
   return `${base}/api/v1${path}`;
 }
 
