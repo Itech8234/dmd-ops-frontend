@@ -7,7 +7,7 @@
 import { getAccessToken } from "./http";
 
 function wsBase(): string {
-  return process.env.NEXT_PUBLIC_WS_BASE || "ws://localhost:8000";
+  return process.env.NEXT_PUBLIC_WS_BASE || "wss://dmd-ops-backend.onrender.com";
 }
 
 export function chatSocketUrl(conversationId: string): string {
